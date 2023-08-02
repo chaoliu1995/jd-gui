@@ -14,6 +14,7 @@ import org.jd.gui.api.feature.ContentSearchable;
 import org.jd.gui.api.feature.LineNumberNavigable;
 import org.jd.gui.api.feature.PreferencesChangeListener;
 import org.jd.gui.api.feature.UriOpenable;
+import org.jd.gui.test.EmptyTestFoldIndicatorIcon;
 import org.jd.gui.util.exception.ExceptionUtil;
 
 import javax.swing.*;
@@ -33,9 +34,10 @@ import java.util.Map;
 public class AbstractTextPage extends JPanel implements LineNumberNavigable, ContentSearchable, UriOpenable, PreferencesChangeListener {
     protected static final String FONT_SIZE_KEY = "ViewerPreferences.fontSize";
 
-    protected static final ImageIcon COLLAPSED_ICON = new ImageIcon(AbstractTextPage.class.getClassLoader().getResource("org/jd/gui/images/plus.png"));
-    protected static final ImageIcon EXPANDED_ICON = new ImageIcon(AbstractTextPage.class.getClassLoader().getResource("org/jd/gui/images/minus.png"));
-
+    //protected static final ImageIcon COLLAPSED_ICON = new ImageIcon(AbstractTextPage.class.getClassLoader().getResource("org/jd/gui/images/plus.png"));
+    //protected static final ImageIcon EXPANDED_ICON = new ImageIcon(AbstractTextPage.class.getClassLoader().getResource("org/jd/gui/images/minus.png"));
+    protected static final FoldIndicatorIcon COLLAPSED_ICON = new EmptyTestFoldIndicatorIcon(true);
+    protected static final FoldIndicatorIcon EXPANDED_ICON = new EmptyTestFoldIndicatorIcon(false);
     protected static final Color DOUBLE_CLICK_HIGHLIGHT_COLOR = new Color(0x66ff66);
     protected static final Color SEARCH_HIGHLIGHT_COLOR = new Color(0xffff66);
     protected static final Color SELECT_HIGHLIGHT_COLOR = new Color(0xF49810);
